@@ -9,7 +9,7 @@ import state from '../store';
 import { CustomButton } from '../components';
 const CanvasModel = () => {
     const snap = useSnapshot(state);
-    const [shirtSize, setShirtSize] = useState(25);
+    const [shirtSize, setShirtSize] = useState(40);
     console.log("shirtSize", shirtSize)
     return (
         <>
