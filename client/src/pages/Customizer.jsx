@@ -117,13 +117,15 @@ const Customizer = () => {
             })
     }
 
-    // const [shirtSize, setShirtSize] = useState(25);
-    // const changeShirtSizeFn = (e) => {
-    //     setShirtSize(e.target.value);
-    //     state.fov = 100 - shirtSize;
+    //slider
 
-    // }
-    // console.log("shirtSize", shirtSize, state.fov)
+    const [shirtSize, setShirtSize] = useState(25);
+
+    const changeShirtSizeFn = (e) => {
+        setShirtSize(e.target.value);
+    }
+
+    console.log("shirtSize", shirtSize)
 
     return (
         <AnimatePresence>
@@ -140,7 +142,7 @@ const Customizer = () => {
                                     <Tab
                                         key={tab.name}
                                         tab={tab}
-                                        handleClick={() => setActiveEditorTab(tab.name)}
+                                        handleClick={() => { activeEditorTab !== "" ? setActiveEditorTab("") : setActiveEditorTab(tab.name) }}
                                     />
                                 ))}
 
